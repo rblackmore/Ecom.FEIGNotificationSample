@@ -27,7 +27,7 @@ namespace Ecom.FEIGNotificationSample
             //Set up FedmTaskOption, this is where you configure the port to listen to, as well as the option to reply with an acknoledgement
             FedmTaskOption taskOpt = new FedmTaskOption()
             {
-                IPPort = 10005,
+                IPPort = 10002,
                 NotifyWithAck = 0 // 0 = Off, 1 = Off
             };
 

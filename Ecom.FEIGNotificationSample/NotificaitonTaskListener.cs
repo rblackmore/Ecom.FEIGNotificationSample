@@ -26,13 +26,15 @@ namespace Ecom.FEIGNotificationSample
         //Executes when a new notificaiton is recieved from the reader.
         public void OnNewNotification(int iError, string ip, uint portNr)
         {
+
             //Get Array of BRM Items from BRM Table in reader object
             FedmBrmTableItem[] tagReads = (_reader.GetTable(FedmIscReaderConst.BRM_TABLE) as FedmBrmTableItem[]);
 
             if (tagReads != null && tagReads.Length > 0)
             {
                 Console.WriteLine($"------------------------");
-                Console.WriteLine($"New Notifiaiton Recieved");
+                Console.WriteLine($"New Notification Recieved");
+                Console.WriteLine($"From IP: {ip}");
 
 
                 foreach (FedmBrmTableItem item in tagReads)
